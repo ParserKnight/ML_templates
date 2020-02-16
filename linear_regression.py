@@ -1,40 +1,43 @@
 from sklearn.linear_model import LinearRegression
-mnemo_linreg=LinearRegression()
-
+from sklearn.linear_model import SGDRegressor
 import numpy as np
 import numpy.random as rnd
-
-x=3*rnd.rand(100,1)
-y=4+(3*x)+rnd.randn(100,1)
-
 import matplotlib
 import matplotlib.pyplot as plt
 
-plt.figure(figsize=(20,10))
-plt.scatter(x,y)
+def run_example():
+    """Function to exhibit an example of linear regression"""
 
-mnemo_linreg.fit(x,y)
-mnemo_linreg.intercept_, mnemo_linreg.coef_
+    mnemo_linreg=LinearRegression()
 
-regresion=4.03194963+2.96077091*x
+    x=3*rnd.rand(100,1)
+    y=4+(3*x)+rnd.randn(100,1)
 
-plt.figure(figsize=(20,10))
-plt.scatter(x,y)
-plt.plot(x,regresion, 'purple')
+    plt.figure(figsize=(20,10))
+    plt.scatter(x,y)
 
-from sklearn.linear_model import SGDRegressor
-sgd_reg=SGDRegressor(n_iter=50, penalty=None, eta0=0.1)
+    mnemo_linreg.fit(x,y)
+    #mnemo_linreg.intercept_, mnemo_linreg.coef_
 
-sgd_reg.fit(x,y)
-sgd_reg.intercept_,sgd_reg.coef_
+    regresion=4.03194963+2.96077091*x
 
-regresion_sgd=4.0402834+2.97237333*x
+    plt.figure(figsize=(20,10))
+    plt.scatter(x,y)
+    plt.plot(x,regresion, 'purple')
 
-plt.figure(figsize=(20,10))
-plt.scatter(x,y)
-plt.plot(x,regresion_sgd, 'r-')
+    sgd_reg=SGDRegressor(n_iter=50, penalty=None, eta0=0.1)
 
-sgd_reg.predict(36)
+    sgd_reg.fit(x,y)
+    sgd_reg.intercept_,sgd_reg.coef_
 
-sgd_reg.predict(1)
+    regresion_sgd=4.0402834+2.97237333*x
 
+    plt.figure(figsize=(20,10))
+    plt.scatter(x,y)
+    plt.plot(x,regresion_sgd, 'r-')
+
+    sgd_reg.predict(36)
+    sgd_reg.predict(1)
+
+if __name__=="__main__":
+    run_example()
