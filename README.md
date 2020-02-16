@@ -1,5 +1,7 @@
 # ML_templates
 
+<img src="https://github.com/ParserKnight/ML_templates/blob/develop/preview_images/1.png" height="500">
+
 
 ![Image description](https://github.com/ParserKnight/ML_templates/blob/develop/preview_images/Screenshot%20from%202020-02-16%2016-02-56.png | width=48)
 
@@ -7,4 +9,3 @@
 
 ![Image description](https://github.com/ParserKnight/ML_templates/blob/develop/preview_images/Screenshot%20from%202020-02-16%2016-03-00.png)
 
-<img src="https://github.com/ParserKnight/ML_templates/blob/develop/preview_images/1.png" height="100">
